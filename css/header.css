@@ -1,0 +1,231 @@
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f9fcfe;
+  padding-left: 250px;
+}
+header{
+  position: fixed;
+  width: 250px;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+}
+header::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  left:0;
+  top: 27px;
+  z-index: 1;
+  box-sizing: border-box;
+  display: none;
+}
+header div.inner{ /* 하위선택자  */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  position: relative;
+}
+
+header .inner,
+header .inner>*{ /* > 자식선택자를 의미 */
+/*! border: 1px solid #333; */
+}
+header .inner {
+    
+  }
+  header .inner h1 {
+    
+  }
+  header .inner h1 a {
+  background-image: url(../img/logo-pc.png);
+  width: 142px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  /*! padding: 20px 0; */
+  }
+
+  header .inner ul.gnb {
+  align-self: flex-start;
+  padding-left: 30px;
+  }
+  header .inner ul.gnb:hover{
+    width: 1100px;
+  }
+    header .inner ul.gnb::before{
+  content: "";
+  background-color: white;
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 1s; 
+  }
+  header .inner ul.gnb::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    z-index: -1;
+    border: 1px solid #f0eded;
+    display: none;
+  }
+  header .inner ul.gnb:hover::after{
+    display: block;
+  }
+  header .inner ul.gnb:hover::before{
+  width: 1100px;
+  }
+  header .inner ul.gnb>li {
+  display: flex;
+  align-items: center;
+  }
+  header .inner ul.gnb>li>h2{
+
+  width: 220px;
+  }
+  header .inner ul.gnb>li>h2 a {
+  font-weight: 400;
+  padding: 20px 21px;
+  display: block;
+  /*! line-height: 3; */ /* 블럭에게만 적용되는 속성 */
+  font-size: 20px;
+  padding-top: 26.5px;
+  position: relative;
+  transition: all 0.5s;
+  }
+  header .inner ul.gnb>li:hover>h2 a{
+    color: red;
+  }
+header .inner ul.gnb > li > h2 a::after {
+   content: "";
+   display: block;
+   width: calc(100% - 42px);
+   border-bottom: 4px solid red;
+   transform: translateY(13px) scaleX(0);
+   position: absolute;
+   left: 21px;
+   transition: all 0.5s;
+   transform-origin: 50%;
+  }
+  header .inner ul.gnb>li:hover>h2 a::after{
+    content: "";
+    display: block;
+    width: calc(100% - 42px);
+    border-bottom: 4px solid red;
+    transform: translateY(13px) scaleX(100%);
+    position: absolute;
+    left: 21px;
+  }
+  /* gnb서브메뉴 */
+  header .inner ul.gnb li ul.gnbsub{
+   display: none;
+   align-items: center;
+  }
+  header .inner ul.gnb:hover li ul.gnbsub{
+  /*! display: flex; */
+  }
+  header .inner ul.gnb:hover ul.gnbsub{
+    opacity: 0;
+    animation-name: gnbfadein;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    display: flex;
+  }
+  @keyframes gnbfadein{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  header .inner ul.gnb li ul.gnbsub li{
+
+  }
+  header .inner ul.gnb li ul.gnbsub li a{
+  line-height: ;
+  padding-left: 21px;
+  padding-right: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  }
+
+  header .inner ul.enb {
+    display: flex; 
+    gap: 15px;
+    position: absolute;
+    right: calc(-1920px + 300px);
+    top: 30px;
+  }
+  header .inner ul.enb li {
+    
+  }
+  header .inner ul.enb li select {
+  background-color: transparent;
+  border: none;
+  }
+  header .inner ul.enb li select option{
+    
+  }
+  header .inner ul.enb li a{
+  font-size: 0;
+  width: 20px;
+  height: 13px;
+  display: block;
+  border-top: 3px solid #666;
+  border-bottom: 3px solid #666;
+  display: flex;
+  align-items: center;
+  }
+  header .inner ul.enb li a::before{
+  content: "";
+  /*! border-top: 3px solid #666; */
+  width: 100%;
+  display: block;
+  height: 3px;
+  background-color: #666;
+  }
+  header .inner ul.tnb{
+  /*! position: absolute; */
+  /*! right: 0; */
+  /*! top: -23px; */
+  font-size: 12px;
+  display: flex;
+  gap: 14px;
+  }
+  header .inner ul.tnb li{
+
+  }
+  header .inner ul.tnb li a{
+
+  }
+  header .inner ul.tnb li a::after{
+  content: "";
+    
+  background-image: url(../img/openinnew.svg);
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background-size: contain;
+  vertical-align: -4px;
+  }
+
+
+
+
+
