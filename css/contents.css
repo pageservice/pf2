@@ -1,0 +1,48 @@
+#contents {
+  a: a;
+}
+#contents .wrap {
+  a: a;
+}
+#contents .wrap h2 {
+  a: a;
+}
+#contents .wrap article {
+  a: a;
+}
+#contents .wrap article a {
+  a: a;
+}
+#contents .wrap article a ::before {
+  a: a;
+}
+#contents .wrap article a h3 {
+  a: a;
+}
+#contents .wrap article a h3 strong {
+  a: a;
+}
+#contents .wrap div.right {
+  a: a;
+}
+#contents .wrap div.right h3 {
+  a: a;
+}
+#contents .wrap div.right ul {
+  a: a;
+}
+#contents .wrap div.right ul li {
+  a: a;
+}
+#contents .wrap div.right ul li ::before {
+  a: a;
+}
+#contents .wrap div.right ul li h4 {
+  a: a;
+}
+#contents .wrap div.right ul li p {
+  a: a;
+}
+#contents .wrap div.right ul li a {
+  a: a;
+}
